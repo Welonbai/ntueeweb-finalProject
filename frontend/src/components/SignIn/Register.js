@@ -8,22 +8,9 @@ import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-// import Visibility from '@mui/icons-material/Visibility';
-// import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from "@mui/material/IconButton";
 
 import { useManage } from '../../containers/hooks/useManage.js';
-
-// Button = styled.button`
-//   display: inline-block;
-//   color: blue;
-//   font-size: 5em;
-//   margin: 1em;
-//   padding: 0.25em 1em;
-//   border: 2px solid palevioletred;
-//   border-radius: 3px;
-//   display: block;
-// `;
 
 const Register = () => {
   const {
@@ -42,11 +29,6 @@ const Register = () => {
 
   return (
     <>
-      <Space
-        direction="vertical"
-        align="center"
-        style={{ width: "100%", justifyContent: "center" }}
-      ></Space>
       <div style={{ margin: 10 }}>
         <Grid
           container
@@ -81,28 +63,6 @@ const Register = () => {
             />
           </Grid>
         </Grid>
-
-        {/* <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
-
-                <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-                <Input
-                    id="standard-adornment-password"
-                    type={showPassword ? 'text' : 'password'}
-                    endAdornment={
-                    <InputAdornment position="end">
-                        <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={setShowPassword((show) => !show)}
-                        onMouseDown={(event) => {
-                            event.preventDefault();
-                        }}
-                        >
-                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                        </IconButton>
-                    </InputAdornment>
-                    }
-                />
-            </FormControl> */}
       </div>
       {errMsg ? <div>{errMsg}</div> : <></>}
       <Space direction="horizontal">
